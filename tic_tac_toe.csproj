@@ -118,7 +118,6 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="Bomba_TemporaryKey.pfx" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />

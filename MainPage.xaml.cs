@@ -44,15 +44,12 @@ namespace Bomba
         {
 			Image img = sender as Image; //cast
 			
-			if(jucator)
-				
+			if(jucator)	
 				img.Source = new BitmapImage(new Uri("ms-appx:/Images/x.png", 
 						      UriKind.RelativeOrAbsolute)); //incarcare imagine din Images
-			else
-					
+			else		
 				img.Source = new BitmapImage(new Uri("ms-appx:/Images/zero.png", 
 						     UriKind.RelativeOrAbsolute)); //incarcare imagine din Images
-			
 
 			img.Tapped -=Image_Tapped;
 
@@ -65,7 +62,6 @@ namespace Bomba
 
 			if (jucator)
 				mat[i, j] = 1;
-
 			else
                 mat[i, j] = -1;
 
@@ -82,6 +78,7 @@ namespace Bomba
                if(Verif())
                {
                    var md = new MessageDialog("A castigat jucatorul " + winner);
+
                    asyncCommand = md.ShowAsync();
                    await asyncCommand;
 
@@ -97,6 +94,7 @@ namespace Bomba
                if (VerifRemiza())
                {
                    var md = new MessageDialog("Remiza !!");
+
                    asyncCommand = md.ShowAsync();
                    await asyncCommand;
 
@@ -118,39 +116,39 @@ namespace Bomba
                     mat[i, j] = 0;
 
             C0_0.Tapped += Image_Tapped;
-            C0_0.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C0_0.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C0_1.Tapped += Image_Tapped;
-            C0_1.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C0_1.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C0_2.Tapped += Image_Tapped;
-            C0_2.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C0_2.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C1_0.Tapped += Image_Tapped;
-            C1_0.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C1_0.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C1_1.Tapped += Image_Tapped;
-            C1_1.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C1_1.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C1_2.Tapped += Image_Tapped;
-            C1_2.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C1_2.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C2_0.Tapped += Image_Tapped;
-            C2_0.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C2_0.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C2_1.Tapped += Image_Tapped;
-            C2_1.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C2_1.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
 
             C2_2.Tapped += Image_Tapped;
-            C2_2.Source = new BitmapImage(new Uri("ms-appx:/Images/empty.png",
+            C2_2.Source = new BitmapImage(new Uri("ms-appx:/Images/blank.png",
                      UriKind.RelativeOrAbsolute));
         }
         
@@ -220,6 +218,13 @@ namespace Bomba
             
 			return 0;
 		}
+
+        private void Button_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
+       
 
     }
 }
