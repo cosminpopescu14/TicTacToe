@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
-namespace Bomba
+namespace tic_tac_toe
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -45,7 +45,7 @@ namespace Bomba
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                //this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
 

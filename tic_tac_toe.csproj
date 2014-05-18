@@ -7,14 +7,17 @@
     <ProjectGuid>{EA8BEA55-7475-4A14-BD66-FB6E613C78C4}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Bomba</RootNamespace>
+    <RootNamespace>tic_tac_toe</RootNamespace>
     <AssemblyName>Bomba</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Bomba_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>tic_tac_toe_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>34DF1F5CC161CB417619EAB1403E4133CF35C9F1</PackageCertificateThumbprint>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -118,6 +121,8 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="Bomba_TemporaryKey.pfx" />
+    <None Include="tic_tac_toe_StoreKey.pfx" />
+    <None Include="tic_tac_toe_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />
@@ -127,6 +132,7 @@
     <Content Include="Images\blank.png" />
     <Content Include="Images\x.png" />
     <Content Include="Images\zero.png" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">

@@ -1,7 +1,9 @@
-﻿//Version: 1.0
+﻿//Version: 1.1
 //Un simplu joc de X si 0 dezvolat in timpul laboratorului de Win 8.1
-//Bug-uri: dupa ce castiga unul din jucatori, jocul se reseteaza, dar dupa resetare intra in blocaj;
+//
 //Mai multe functii vor fi adaugate in viior; :)
+//adaugat buton de inchidere al jocului
+
  
 
 
@@ -24,7 +26,7 @@ using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace Bomba
+namespace tic_tac_toe
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -77,7 +79,7 @@ namespace Bomba
            {
                if(Verif())
                {
-                   var md = new MessageDialog("A castigat jucatorul " + winner);
+                   var md = new MessageDialog("Player " + winner + " won !");
 
                    asyncCommand = md.ShowAsync();
                    await asyncCommand;
@@ -93,7 +95,7 @@ namespace Bomba
 
                if (VerifRemiza())
                {
-                   var md = new MessageDialog("Remiza !!");
+                   var md = new MessageDialog("Draw !!");
 
                    asyncCommand = md.ShowAsync();
                    await asyncCommand;
