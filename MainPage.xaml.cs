@@ -3,7 +3,7 @@
 //
 //Mai multe functii vor fi adaugate in viior; :)
 //adaugat buton de inchidere al jocului
-//vesiunea buna
+//versiunea buna
 //am modificat foaret putitn stiulul casutelor cu numele jucatorilor
 //pentru a testa aceasta aplicaie este nevoide de vidsual studio 2013 si windows 8.1
 
