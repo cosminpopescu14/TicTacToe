@@ -1,8 +1,11 @@
-﻿//Version: 1.1
+﻿//Version: 1.2
 //Un simplu joc de X si 0 dezvolat in timpul laboratorului de Win 8.1
 //
 //Mai multe functii vor fi adaugate in viior; :)
 //adaugat buton de inchidere al jocului
+//vesiunea buna
+//am modificat foaret putitn stiulul casutelor cu numele jucatorilor
+//pentru a testa aceasta aplicaie este nevoide de vidsual studio 2013 si windows 8.1
 
  
 
@@ -35,7 +38,8 @@ namespace tic_tac_toe
     {
         bool jucator = true;
         int[,] mat = new int[3, 3];
-        string winner = String.Empty;
+        string winner/*x*/ = String.Empty;
+        //string winner/*0*/ = String.Empty;
         IAsyncOperation<IUICommand> asyncCommand = null;
         public MainPage()
         {
@@ -79,9 +83,12 @@ namespace tic_tac_toe
            {
                if(Verif())
                {
-                   var md = new MessageDialog("Player " + winner + " won !");
+                   var md/*x*/ = new MessageDialog("Player " + x_player.Text + "-" + winner + " won !");
+                   //var md0 = new MessageDialog("Player " + _0_player_player.Text + "-" + winner + " won !");
 
                    asyncCommand = md.ShowAsync();
+                   //asyncCommand = md0.ShowAsync();
+                   
                    await asyncCommand;
 
                    if (asyncCommand != null)
@@ -209,12 +216,12 @@ namespace tic_tac_toe
 		{
             if (s == -3)
             {
-                winner = "zero";
+                winner/*0*/ = "zero";
                 return -1;
             }
             else if (s == 3)
             {
-                winner = "X";
+                winner/*x*/ = "X";
                 return 1;
             }
             
@@ -225,8 +232,7 @@ namespace tic_tac_toe
         {
             Application.Current.Exit();
         }
-
-       
+ 
 
     }
 }
