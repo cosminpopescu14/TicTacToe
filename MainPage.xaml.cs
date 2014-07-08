@@ -4,8 +4,8 @@
 //Mai multe functii vor fi adaugate in viior; :)
 //adaugat buton de inchidere al jocului
 //versiunea buna
-//am modificat foaret putitn stiulul casutelor cu numele jucatorilor
-//pentru a testa aceasta aplicaie este nevoide de vidsual studio 2013 si windows 8.1
+//am modificat  putin stiulul casutelor cu numele jucatorilor
+//pentru a testa aceasta aplicatie este nevoie de visual studio 2013 si windows 8.1
 
  
 
